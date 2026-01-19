@@ -1,4 +1,5 @@
-import { Bug, MapPin, Phone, MessageCircle } from "lucide-react";
+import { MapPin, Phone, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo-astral.webp";
 
 const WHATSAPP_NUMBER = "5511999999999";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -10,19 +11,15 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
-            <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <Bug className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <div>
-                <span className="font-display text-lg font-bold">
-                  Astral Jundiaí
-                </span>
-                <p className="text-xs text-primary-foreground/70">Detetizadora</p>
-              </div>
+            <div className="mb-4">
+              <img 
+                src={logo} 
+                alt="Astral Saúde Ambiental" 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm text-primary-foreground/70">
-              Soluções profissionais em controle de pragas para residências, comércios e indústrias.
+              Líder no controle de pragas. Soluções profissionais para residências, comércios e indústrias em Jundiaí e região.
             </p>
           </div>
 
@@ -75,7 +72,7 @@ export function Footer() {
 
         <div className="mt-10 border-t border-primary-foreground/10 pt-6 text-center text-sm text-primary-foreground/50">
           <p>
-            © {new Date().getFullYear()} Astral Jundiaí Detetizadora. Todos os direitos reservados.
+            © {new Date().getFullYear()} Astral Saúde Ambiental. Todos os direitos reservados.
           </p>
         </div>
       </div>

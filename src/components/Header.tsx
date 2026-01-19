@@ -1,21 +1,18 @@
-import { Bug, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
+import logo from "@/assets/logo-astral.webp";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg gradient-primary">
-            <Bug className="h-6 w-6 text-primary-foreground" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display text-lg font-bold text-primary-dark leading-tight">
-              Astral Jundiaí
-            </span>
-            <span className="text-xs text-muted-foreground">Detetizadora</span>
-          </div>
-        </div>
+        <a href="/" className="flex items-center">
+          <img 
+            src={logo} 
+            alt="Astral Saúde Ambiental - Líder no controle de pragas" 
+            className="h-10 w-auto md:h-12"
+          />
+        </a>
 
         <div className="flex items-center gap-4">
           <a 

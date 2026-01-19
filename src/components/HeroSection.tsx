@@ -26,7 +26,7 @@ export function HeroSection() {
             {/* Badge */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground">
               <Shield className="h-4 w-4" />
-              Empresa Certificada em Jundiaí
+              Líder no controle de pragas em Jundiaí
             </div>
 
             {/* Headline */}

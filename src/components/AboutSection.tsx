@@ -37,7 +37,7 @@ export function AboutSection() {
               Proteção especializada para seu lar e negócio
             </h2>
             <p className="mb-8 text-lg text-muted-foreground leading-relaxed">
-              A <strong className="text-foreground">Astral Jundiaí Detetizadora</strong> é referência em controle de pragas na região de Jundiaí. 
+              A <strong className="text-foreground">Astral Saúde Ambiental</strong> é líder em controle de pragas na região de Jundiaí. 
               Com anos de experiência, oferecemos soluções eficazes e seguras para eliminar pragas 
               urbanas de residências, comércios e indústrias.
             </p>
