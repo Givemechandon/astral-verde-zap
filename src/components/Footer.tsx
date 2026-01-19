@@ -1,8 +1,7 @@
 import { MapPin, Phone, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo-astral.webp";
 
-const WHATSAPP_NUMBER = "5511999999999";
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+const WHATSAPP_URL = "https://web.whatsapp.com/send?phone=5511959100002&text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es+dos+servi%C3%A7os+da+Astral";
 
 export function Footer() {
   return (
@@ -34,14 +33,14 @@ export function Footer() {
                 className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary transition-colors"
               >
                 <MessageCircle className="h-4 w-4" />
-                WhatsApp: (11) 99999-9999
+                WhatsApp: (11) 95910-0002
               </a>
               <a 
                 href="tel:+5511999999999"
                 className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                Telefone: (11) 99999-9999
+                Telefone: (11) 95910-0002
               </a>
               <div className="flex items-center gap-2 text-primary-foreground/70">
                 <MapPin className="h-4 w-4" />
