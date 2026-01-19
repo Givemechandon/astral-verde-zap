@@ -17,6 +17,8 @@
 
     --primary: 134 64% 36%;
     --primary-foreground: 0 0% 100%;
+    
+    --star: 45 93% 58%;
 
     --primary-dark: 134 67% 23%;
     --primary-dark-foreground: 0 0% 100%;
@@ -43,10 +45,13 @@
     --gradient-primary: linear-gradient(135deg, hsl(134 64% 36%) 0%, hsl(134 67% 23%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(134 30% 97%) 0%, hsl(0 0% 100%) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(134 64% 36%) 0%, hsl(134 67% 28%) 100%);
+    --gradient-cta-overlay: linear-gradient(135deg, hsl(134 67% 15% / 0.92) 0%, hsl(134 67% 20% / 0.88) 50%, hsl(134 64% 25% / 0.85) 100%);
+    --gradient-radial-glow: radial-gradient(ellipse at center, hsl(134 64% 50% / 0.3) 0%, transparent 70%);
     --shadow-soft: 0 4px 20px -4px hsl(134 64% 36% / 0.15);
     --shadow-card: 0 8px 30px -8px hsl(134 64% 36% / 0.12);
     --shadow-elevated: 0 20px 50px -15px hsl(134 64% 36% / 0.2);
     --shadow-cta: 0 8px 25px -5px hsl(134 64% 36% / 0.4);
+    --shadow-glow: 0 0 60px hsl(134 64% 50% / 0.4), 0 0 100px hsl(134 64% 50% / 0.2);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -122,6 +127,18 @@
     animation: bounce-subtle 2s ease-in-out infinite;
   }
 
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2.5s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -135,5 +152,30 @@
   @keyframes bounce-subtle {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(134 64% 50% / 0.4), 0 0 40px hsl(134 64% 50% / 0.2);
+    }
+    50% { 
+      box-shadow: 0 0 30px hsl(134 64% 50% / 0.6), 0 0 60px hsl(134 64% 50% / 0.3);
+    }
+  }
+
+  @keyframes slide-up {
+    0% { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% { 
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
