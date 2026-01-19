@@ -1,20 +1,25 @@
 import { Shield, Clock, Zap } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
+import ctaBackground from "@/assets/cta-background.jpg";
 
 export function CTASection() {
   return (
-    <section className="relative overflow-hidden gradient-primary py-16 md:py-24">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+    <section className="relative overflow-hidden py-20 md:py-28">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={ctaBackground} 
+          alt="Veículo Astral Saúde Ambiental" 
+          className="h-full w-full object-cover"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/95 via-primary-dark/90 to-primary/85" />
       </div>
 
       <div className="container relative">
         <div className="mx-auto max-w-3xl text-center">
           {/* Urgency Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary-foreground/20 px-4 py-2 text-sm font-medium text-primary-foreground">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary-foreground/20 px-4 py-2 text-sm font-medium text-primary-foreground backdrop-blur-sm">
             <Zap className="h-4 w-4" />
             Atendimento Imediato
           </div>
