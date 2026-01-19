@@ -32,7 +32,7 @@ export function HeroSection() {
             {/* Headline */}
             <h1 className="mb-6 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-5xl">
               Sua casa livre de pragas{" "}
-              <span className="text-gradient">com garantia!</span>
+              <span className="text-primary">com garantia!</span>
             </h1>
 
             {/* Subheadline */}
