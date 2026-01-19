@@ -1,4 +1,5 @@
 import { CheckCircle, Building2, Home, Factory } from "lucide-react";
+import equipeImage from "@/assets/equipe-trabalho.jpg";
 
 const features = [
   "Atendimento residencial, comercial e industrial",
@@ -12,8 +13,23 @@ export function AboutSection() {
     <section id="sobre" className="py-16 md:py-24">
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+          {/* Image */}
+          <div className="relative order-2 lg:order-1">
+            <div className="relative rounded-3xl overflow-hidden shadow-elevated">
+              <img 
+                src={equipeImage} 
+                alt="Equipe Astral Jundiaí em serviço" 
+                className="w-full h-auto object-cover aspect-[4/3]"
+              />
+            </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-2xl bg-secondary shadow-soft -z-10" />
+            <div className="absolute -left-4 -top-4 h-16 w-16 rounded-xl gradient-primary opacity-50 -z-10" />
+          </div>
+
           {/* Content */}
-          <div>
+          <div className="order-1 lg:order-2">
             <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
               Sobre Nós
             </span>
@@ -26,7 +42,7 @@ export function AboutSection() {
               urbanas de residências, comércios e indústrias.
             </p>
 
-            <ul className="space-y-4">
+            <ul className="mb-8 space-y-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
@@ -34,28 +50,25 @@ export function AboutSection() {
                 </li>
               ))}
             </ul>
-          </div>
 
-          {/* Visual Cards */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-1 lg:gap-6">
-            {[
-              { icon: Home, title: "Residencial", desc: "Proteção para sua família" },
-              { icon: Building2, title: "Comercial", desc: "Ambientes livres de pragas" },
-              { icon: Factory, title: "Industrial", desc: "Soluções para grandes áreas" },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 rounded-xl border border-border bg-card p-5 shadow-card transition-all duration-300 hover:shadow-elevated hover:-translate-y-1"
-              >
-                <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl gradient-primary">
-                  <item.icon className="h-7 w-7 text-primary-foreground" />
+            {/* Visual Cards */}
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { icon: Home, title: "Residencial" },
+                { icon: Building2, title: "Comercial" },
+                { icon: Factory, title: "Industrial" },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-4 shadow-soft transition-all duration-300 hover:shadow-elevated hover:-translate-y-1"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl gradient-primary">
+                    <item.icon className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <h3 className="font-display text-sm font-bold text-foreground">{item.title}</h3>
                 </div>
-                <div>
-                  <h3 className="font-display font-bold text-foreground">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

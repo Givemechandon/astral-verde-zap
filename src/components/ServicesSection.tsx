@@ -1,5 +1,7 @@
 import { Bug, Rat, TreeDeciduous, Footprints, Skull, Zap } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
+import servicoImage from "@/assets/servico-externo.jpg";
+import tecnicoImage from "@/assets/tecnico-equipamento.jpg";
 
 const services = [
   {
@@ -48,6 +50,34 @@ export function ServicesSection() {
           <p className="text-lg text-muted-foreground">
             Atendemos residências, comércios e indústrias com serviços especializados.
           </p>
+        </div>
+
+        {/* Image Gallery */}
+        <div className="mb-12 grid gap-4 md:grid-cols-2">
+          <div className="relative rounded-2xl overflow-hidden shadow-card group">
+            <img 
+              src={servicoImage} 
+              alt="Técnico realizando dedetização em área externa" 
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+            <div className="absolute bottom-4 left-4 text-primary-foreground">
+              <p className="font-display font-bold text-lg">Áreas Externas</p>
+              <p className="text-sm text-primary-foreground/80">Jardins, quintais e condomínios</p>
+            </div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-card group">
+            <img 
+              src={tecnicoImage} 
+              alt="Técnico Astral com equipamentos de proteção" 
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+            <div className="absolute bottom-4 left-4 text-primary-foreground">
+              <p className="font-display font-bold text-lg">Equipe Preparada</p>
+              <p className="text-sm text-primary-foreground/80">Profissionais qualificados</p>
+            </div>
+          </div>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
