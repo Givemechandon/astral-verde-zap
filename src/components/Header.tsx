@@ -20,7 +20,7 @@ export function Header() {
             className="hidden items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors md:flex"
           >
             <Phone className="h-4 w-4" />
-            (11) 99999-9999
+            (11) 95910-0002
           </a>
           <WhatsAppButton size="sm" className="hidden sm:flex">
             Orçamento Grátis
