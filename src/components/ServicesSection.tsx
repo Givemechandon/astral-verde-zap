@@ -2,6 +2,9 @@ import { Bug, Rat, TreeDeciduous, Footprints, Skull, Zap } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
 import servicoImage from "@/assets/servico-externo.jpg";
 import tecnicoImage from "@/assets/tecnico-equipamento.jpg";
+import pulverizacaoImage from "@/assets/pulverizacao-externa.jpg";
+import inspecaoImage from "@/assets/inspecao-jardim.jpg";
+import controleRoedoresImage from "@/assets/controle-roedores.jpg";
 
 const services = [
   {
@@ -53,29 +56,53 @@ export function ServicesSection() {
         </div>
 
         {/* Image Gallery */}
-        <div className="mb-8 sm:mb-12 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2">
+        <div className="mb-8 sm:mb-12 grid gap-3 sm:gap-4 grid-cols-2 lg:grid-cols-4">
           <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-card group">
             <img 
               src={servicoImage} 
               alt="Técnico realizando dedetização em área externa" 
-              className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-40 sm:h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent" />
             <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-primary-foreground">
-              <p className="font-display font-bold text-base sm:text-lg">Áreas Externas</p>
-              <p className="text-xs sm:text-sm text-primary-foreground/80">Jardins, quintais e condomínios</p>
+              <p className="font-display font-bold text-sm sm:text-base">Áreas Externas</p>
+              <p className="text-xs text-primary-foreground/80">Jardins e quintais</p>
             </div>
           </div>
           <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-card group">
             <img 
-              src={tecnicoImage} 
-              alt="Técnico Astral com equipamentos de proteção" 
-              className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              src={pulverizacaoImage} 
+              alt="Técnico realizando pulverização em área externa" 
+              className="w-full h-40 sm:h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent" />
             <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-primary-foreground">
-              <p className="font-display font-bold text-base sm:text-lg">Equipe Preparada</p>
-              <p className="text-xs sm:text-sm text-primary-foreground/80">Profissionais qualificados</p>
+              <p className="font-display font-bold text-sm sm:text-base">Pulverização</p>
+              <p className="text-xs text-primary-foreground/80">Condomínios e empresas</p>
+            </div>
+          </div>
+          <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-card group">
+            <img 
+              src={inspecaoImage} 
+              alt="Técnico inspecionando jardim" 
+              className="w-full h-40 sm:h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent" />
+            <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-primary-foreground">
+              <p className="font-display font-bold text-sm sm:text-base">Inspeção</p>
+              <p className="text-xs text-primary-foreground/80">Análise técnica</p>
+            </div>
+          </div>
+          <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-card group">
+            <img 
+              src={controleRoedoresImage} 
+              alt="Técnica realizando controle de roedores" 
+              className="w-full h-40 sm:h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent" />
+            <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-primary-foreground">
+              <p className="font-display font-bold text-sm sm:text-base">Controle</p>
+              <p className="text-xs text-primary-foreground/80">Roedores e pragas</p>
             </div>
           </div>
         </div>
