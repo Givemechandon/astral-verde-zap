@@ -11,7 +11,7 @@ const trustBadges = [
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden gradient-hero py-12 md:py-20 lg:py-24">
+    <section className="relative overflow-hidden gradient-hero py-10 sm:py-12 md:py-16 lg:py-24">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -19,46 +19,48 @@ export function HeroSection() {
         }} />
       </div>
 
-      <div className="container relative">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
+      <div className="container relative px-4 sm:px-6">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
             {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground">
-              <Shield className="h-4 w-4" />
-              Líder no controle de pragas em Jundiaí
+            <div className="mb-4 sm:mb-6 inline-flex items-center gap-2 rounded-full bg-secondary px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-secondary-foreground">
+              <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <span className="hidden sm:inline">Líder no controle de pragas em Jundiaí</span>
+              <span className="sm:hidden">Líder em Jundiaí</span>
             </div>
 
             {/* Headline */}
-            <h1 className="mb-6 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-5xl">
+            <h1 className="mb-4 sm:mb-6 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-tight">
               Sua casa livre de pragas{" "}
               <span className="text-primary">com garantia!</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="mb-8 text-lg text-muted-foreground md:text-xl">
+            <p className="mb-6 sm:mb-8 text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
               Atendimento <strong className="text-foreground">rápido e seguro</strong> em Jundiaí.{" "}
-              Produtos regulamentados e <strong className="text-foreground">orçamento 100% gratuito</strong>.
+              <span className="hidden sm:inline">Produtos regulamentados e </span>
+              <strong className="text-foreground">Orçamento 100% gratuito</strong>.
             </p>
 
             {/* CTA */}
-            <div className="mb-8">
-              <WhatsAppButton size="xl">
+            <div className="mb-6 sm:mb-8">
+              <WhatsAppButton size="lg" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8">
                 Solicitar Orçamento Grátis
               </WhatsAppButton>
             </div>
 
-            {/* Trust Badges - Mobile */}
-            <div className="grid grid-cols-2 gap-3 lg:hidden">
+            {/* Trust Badges - Mobile/Tablet */}
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:hidden">
               {trustBadges.map((badge, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 rounded-lg bg-background/80 p-3 shadow-soft backdrop-blur"
+                  className="flex items-center gap-2 rounded-lg bg-background/80 p-2.5 sm:p-3 shadow-soft backdrop-blur"
                 >
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary">
-                    <badge.icon className="h-4 w-4 text-primary" />
+                  <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-secondary flex-shrink-0">
+                    <badge.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
                   </div>
-                  <span className="text-xs font-medium text-foreground">
+                  <span className="text-xs sm:text-sm font-medium text-foreground leading-tight">
                     {badge.text}
                   </span>
                 </div>
@@ -66,12 +68,12 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Image */}
+          {/* Image - Desktop only */}
           <div className="relative hidden lg:block">
             <div className="relative rounded-3xl overflow-hidden shadow-elevated">
               <img 
                 src={heroImage} 
-                alt="Técnico Astral Jundiaí com equipamentos profissionais de dedetização" 
+                alt="Técnico Astral com equipamentos profissionais de dedetização" 
                 className="w-full h-auto object-cover aspect-[4/3]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
@@ -93,7 +95,7 @@ export function HeroSection() {
         </div>
 
         {/* Trust Badges - Desktop */}
-        <div className="mt-12 hidden lg:grid lg:grid-cols-4 gap-4">
+        <div className="mt-10 hidden lg:grid lg:grid-cols-4 gap-4">
           {trustBadges.map((badge, index) => (
             <div
               key={index}

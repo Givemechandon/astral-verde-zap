@@ -36,10 +36,10 @@ export function WhatsAppButton({
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full gradient-cta shadow-cta transition-all duration-300 hover:scale-110 hover:shadow-elevated md:hidden animate-pulse-soft"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full gradient-cta shadow-cta transition-all duration-300 hover:scale-110 hover:shadow-elevated lg:hidden animate-pulse-soft"
         aria-label="Falar no WhatsApp"
       >
-        <WhatsAppIcon className="h-8 w-8 text-primary-foreground" />
+        <WhatsAppIcon className="h-7 w-7 sm:h-8 sm:w-8 text-primary-foreground" />
       </a>
     );
   }
@@ -52,7 +52,7 @@ export function WhatsAppButton({
       asChild
     >
       <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-        <WhatsAppIcon className="h-5 w-5" />
+        <WhatsAppIcon className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
         {children}
       </a>
     </Button>
