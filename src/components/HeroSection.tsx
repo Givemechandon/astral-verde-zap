@@ -46,9 +46,6 @@ export function HeroSection() {
               <WhatsAppButton size="xl">
                 Solicitar Orçamento Grátis
               </WhatsAppButton>
-              <p className="mt-3 text-sm text-muted-foreground">
-                ⚡ Resposta em até 5 minutos
-              </p>
             </div>
 
             {/* Trust Badges - Mobile */}
