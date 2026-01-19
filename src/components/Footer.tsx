@@ -1,0 +1,84 @@
+import { Bug, MapPin, Phone, MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "5511999999999";
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+
+export function Footer() {
+  return (
+    <footer className="border-t border-border bg-foreground py-12 text-primary-foreground">
+      <div className="container">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Brand */}
+          <div>
+            <div className="mb-4 flex items-center gap-2">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                <Bug className="h-6 w-6 text-primary-foreground" />
+              </div>
+              <div>
+                <span className="font-display text-lg font-bold">
+                  Astral Jundiaí
+                </span>
+                <p className="text-xs text-primary-foreground/70">Detetizadora</p>
+              </div>
+            </div>
+            <p className="text-sm text-primary-foreground/70">
+              Soluções profissionais em controle de pragas para residências, comércios e indústrias.
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="mb-4 font-display font-bold">Contato</h4>
+            <div className="space-y-3 text-sm">
+              <a 
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary transition-colors"
+              >
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp: (11) 99999-9999
+              </a>
+              <a 
+                href="tel:+5511999999999"
+                className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary transition-colors"
+              >
+                <Phone className="h-4 w-4" />
+                Telefone: (11) 99999-9999
+              </a>
+              <div className="flex items-center gap-2 text-primary-foreground/70">
+                <MapPin className="h-4 w-4" />
+                Jundiaí – SP
+              </div>
+            </div>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="mb-4 font-display font-bold">Institucional</h4>
+            <div className="space-y-2 text-sm">
+              <a 
+                href="#" 
+                className="block text-primary-foreground/70 hover:text-primary transition-colors"
+              >
+                Política de Privacidade
+              </a>
+              <a 
+                href="#" 
+                className="block text-primary-foreground/70 hover:text-primary transition-colors"
+              >
+                Termos de Uso
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 border-t border-primary-foreground/10 pt-6 text-center text-sm text-primary-foreground/50">
+          <p>
+            © {new Date().getFullYear()} Astral Jundiaí Detetizadora. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
