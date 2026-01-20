@@ -99,9 +99,9 @@ export function HeroSection() {
             variants={itemVariants}
             className="mb-3 sm:mb-4 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary-foreground leading-[1.15]"
           >
-            Sua casa{" "}
+            LIVRE A SUA CASA DAS PRAGAS AGORA!{" "}
             <span className="relative inline-block">
-              <span className="relative z-10 text-primary">livre de pragas</span>
+              <span className="relative z-10 text-primary">COM QUALIDADE E SEGURANÇA</span>
               <motion.span
                 className="absolute -inset-1 rounded-lg bg-primary/15 blur-md"
                 animate={{ opacity: [0.4, 0.7, 0.4] }}
@@ -109,7 +109,6 @@ export function HeroSection() {
               />
             </span>
             <br />
-            <span className="text-primary-foreground/90">com garantia!</span>
           </motion.h1>
 
           {/* Subheadline */}
